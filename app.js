@@ -15,10 +15,25 @@ let updateVisit = (visitKey, visitObject) => {
     redisClient.hset(_key, _obj.userAgent, _obj.ip);
 };
 
+let resetVisits = () => {
+    redisClient.del("visits", (err, success) => {
+        if (success == 1) {
+            console.log("Deleted Successfully!")
+         } else{
+          console.log("Cannot delete")
+         }
+    });
+};
+
 let visitObject = {};
 visitObject.userAgent = "";
 visitObject.ip        = "";
 
+app.get('/reset', (req,res) => {
+   
+    res.send("Deleting Visists");
+    resetVisits(); 
+});
 
 app.get('/', (req, res) =>{
  let visitorUserAgent = req.headers['user-agent'];

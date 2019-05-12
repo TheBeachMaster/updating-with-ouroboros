@@ -18,7 +18,8 @@
 
 - Login to docker [steps](https://docs.docker.com/engine/reference/commandline/login/) 
 - Build image `# docker build -t mydockerusername/myappname .`
-> Container maybe update locally 
+
+
 - Push app image to Docker registry 
     `# docker push myusername/myappname`
 

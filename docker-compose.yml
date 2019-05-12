@@ -2,6 +2,7 @@ version: '2.1'
 
 services:
   site-counter-app:
+    container_name: sitecounter
     image: arthurkenotieno/site-counter-app
     #build: .
     # You don't need the build context since this image will be pushed to the container registry
