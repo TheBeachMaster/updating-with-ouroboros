@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  updating-with-ouroboros:
+    image: updating-with-ouroboros
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3080:3080
+      - 9229:9229
+    ## set your startup file here
+    command: node --inspect index.js

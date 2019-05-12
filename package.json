@@ -1,0 +1,20 @@
+{
+  "name": "updating-with-ouroboros",
+  "version": "1.0.0",
+  "description": "NodeJS site visit counter -Ouroboros Demo",
+  "main": "app.js",
+  "repository": "https://github.com/TheBeachMaster/updating-with-ouroboros.git",
+  "author": "TheBeachmaster <otienoken@outlook.com>",
+  "license": "GPL-v3",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
