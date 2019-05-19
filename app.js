@@ -1,7 +1,7 @@
 const express = require('express');
 const redis   = require('redis');
 
-// Use this fopr Docker-compose environments.
+// Use this for Docker-compose environments.
 const redisOptions = {
     host : "redis",
     port : 6379
