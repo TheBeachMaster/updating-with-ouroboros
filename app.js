@@ -1,7 +1,13 @@
 const express = require('express');
 const redis   = require('redis');
 
-let redisClient    = redis.createClient();
+// Use this fopr Docker-compose environments.
+const redisOptions = {
+    host : "redis",
+    port : 6379
+};
+
+let redisClient    = redis.createClient(redisOptions);
 redisClient.on("error", (err) => {
     console.error("Redis Error: " + err);
 });
