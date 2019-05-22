@@ -49,7 +49,7 @@ app.get('/', (req, res) =>{
  let response = "";
  let resObject;
  redisClient.hgetall("visits", (err, obj) => {
-     if(obj != null)
+     if(obj !== null)
      {
         let jsonResponse = JSON.stringify(obj);
         let visitors = Object.keys(obj).length;
