@@ -61,7 +61,7 @@ app.get('/', (req, res) =>{
         response += `${resObject}`; 
         res.send(response);
      } else {
-         response = "You are first here!";
+         response = "You are first here! Hit Refresh or (F5) or (Ctrl+R) to update";
          res.send(response);
      }
  });
